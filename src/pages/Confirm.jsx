@@ -12,7 +12,7 @@ export const Confirm = () => {
     const {token}=useParams() //capturo del token
     const veryfyToken= async()=>{
         try {
-            const url=`${import.meta.env.VITE_FRONTEND_URL}/confirmar/${token}`
+            const url=`${import.meta.env.VITE_BACKEND_URL}/confirmar/${token}`
             const respuesta= await axios.get(url)
             console.log(respuesta.data.msg)
             toast.success(respuesta?.data?.msg)
