@@ -1,20 +1,29 @@
-import {Link} from 'react-router'
+import {Link} from 'react-router-dom'
 import {useForm} from 'react-hook-form'
 import useFetch from '../hooks/useFetch';
-import { ToastContainer } from 'react-toastify';
-
+import { ToastContainer, toast } from 'react-toastify';
 
 
 export const Forgot = () => {
     const {register, handleSubmit,formState: { errors },} = useForm()
     const{fetchDataBackend}=useFetch()
     
+    /*
     const sendMail=(data)=>{
         const url=`${import.meta.env.VITE_BACKEND_URL}/recuperarpassword`
-        fetchDataBackend(url,data,'POST')
-
+        fetchDataBackend(url,data,'POST')*/
+    
+    const sendMail = async (data) => {
+    const url = `${import.meta.env.VITE_BACKEND_URL}/recuperarpassword`;
+    try {
+        await fetchDataBackend(url, data, 'POST');
+        // Aquí puedes mostrar un toast de éxito
+        toast.success("Correo enviado correctamente");
+    } catch (error) {
+        // Mostrar error con toast o alerta
+        toast.error(error.response?.data?.msg || "Error al enviar el correo");
+    } 
 }
-
 
     return (
         <div className="flex flex-col sm:flex-row h-screen">

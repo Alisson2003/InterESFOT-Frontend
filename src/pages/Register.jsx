@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
@@ -16,7 +16,7 @@ export const Register = () => {
             const respuesta = await axios.post(url,data)
             toast.success(respuesta.data.msg)
         } catch (error) {
-            toast.error(error.response.data.msg)
+            toast.error(error?.response?.data?.msg || 'Error al registrar usuario')
         }
     }
 
@@ -133,7 +133,7 @@ export const Register = () => {
             </div>
 
             {/* Sección con imagen de fondo, solo visible en pantallas grandes */}
-            <div className="w-full sm:w-1/2 h-1/3 sm:h-screen bg-[url('/public/images/buho.jpg')] bg-no-repeat bg-cover bg-center sm:block hidden"></div>
+            <div className="w-full sm:w-1/2 h-1/3 sm:h-screen bg-[url('/images/buho.jpg')] bg-no-repeat bg-cover bg-center sm:block hidden"></div>
         </div>
     );
 }

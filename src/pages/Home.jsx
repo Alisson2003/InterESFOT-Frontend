@@ -2,7 +2,7 @@
 {/*import logoDogCatMain from '../assets/dogmain.png'*/}
 import cancha from '../assets/futbol1.jpg'
 {/*import logoDog from '../assets/dog-hand.webp'*/}
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom';
 
 import { FaFacebook } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
@@ -40,8 +40,7 @@ export const Home = () => {
 
                     <div className="relative z-10 text-center px-6" style={{ fontFamily: 'Colibri' }} >
                         <h1 className="text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">
-                            Cuando el cuerpo se mueve<br /> el alma también sana.
-                        </h1>
+                            Cuando el cuerpo se mueve<br /> el alma también sana.</h1>
                         
                         <p className="mt-2 text-lg md:text-2xl opacity-90">
                         Vive el deporte como forma de libertad, emoción y vida.
@@ -71,7 +70,8 @@ export const Home = () => {
                         <img src={atletismo} alt="App Store" className='w-full h-full object-cover' />
                     </div>
 
-                    <div className='px-1 sm:w-1/2 w-72 break-words"'>
+                    <div className='px-1 sm:w-1/2 w-72 break-words'>
+
                         <p className='my-4'>
                             La ESFOT, fiel a su misión de formar tecnólogos de excelencia y emprendedores, 
                             y a su visión de liderazgo, innovación y compromiso con el desarrollo sustentable , 
@@ -103,7 +103,7 @@ export const Home = () => {
                         <li><FaFacebook className='text-2xl' /></li>
                         <li><FaSquareInstagram className='text-2xl' /></li>
                         <li><FaXTwitter className='text-2xl' /></li>
-                        <li><FaTiktok clasaName= 'text-2xl'/></li>
+                        <FaTiktok className='text-2xl' />
                     </ul>
                 </div>
                 <div className='flex justify-between items-center'>
