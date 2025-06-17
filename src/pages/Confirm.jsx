@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import confirmacion from '../assets/confirma.jpg'
+import fondo from '../assets/fondoDeporte.jpg'
 import {Link, useParams} from 'react-router'
 import { toast, ToastContainer } from 'react-toastify'
 import axios from 'axios'
