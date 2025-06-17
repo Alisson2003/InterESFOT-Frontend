@@ -19,13 +19,11 @@ export const Confirm = () => {
             toast.error(error?.response?.data?.msg)
         }
     }
-/*
-    useEffect(()=>{
-            veryfyToken()
+
+    useEffect(() => {
+        verifyToken()
     },[])
-
-    */
-
+/*
     useEffect(() => {
         const veryfyToken = async () => {
             try {
@@ -39,7 +37,7 @@ export const Confirm = () => {
     
       veryfyToken();
     }, []);
-    
+    */
     return (
         <div 
             className="flex flex-col items-center justify-center h-screen bg-cover bg-center bg-no-repeat "
