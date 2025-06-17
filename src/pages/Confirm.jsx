@@ -11,18 +11,13 @@ export const Confirm = () => {
     // CAPTUARAR EL TOKEN
     const {token}=useParams() //capturo del token
     const veryfyToken= async()=>{
-        try {
-            const url=`${import.meta.env.VITE_BACKEND_URL}confirm/${token}`
-            const respuesta= await axios.get(url)
-            console.log(respuesta.data.msg)
+         try {
+            const url = `${import.meta.env.VITE_BACKEND_URL}/confirmar/${token}`
+            const respuesta = await axios.get(url)
             toast.success(respuesta?.data?.msg)
-
         } catch (error) {
-            console.log(error);
-            toast.error(error?.response?.data?.msg);
-
+            toast.error(error?.response?.data?.msg)
         }
-    
     }
 /*
     useEffect(()=>{
