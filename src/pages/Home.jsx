@@ -15,12 +15,12 @@ import { FaTiktok } from 'react-icons/fa6';
 export const Home = () => {
     return (
         <>
-         
-            <header className="container mx-auto h-40 text-center py-4 md:flex justify-between items-center px-4 md:h-15">
-              <ul className='flex justify-center items-center gap-6 my-4'>
-                    {/*esfot para el logo pequeño */ }
-                    <li><img src={dragon_cabeza} alt="logo" width='80px' height='80px' />
-                    </li>
+        
+        <header className="container mx-auto h-40 text-center py-4 md:flex justify-between items-center px-4 md:h-15">
+            <ul className='flex justify-center items-center gap-6 my-4'>
+                {/*esfot para el logo pequeño */ }
+                <li><img src={dragon_cabeza} alt="logo" width='80px' height='80px' />
+                </li>
                 </ul>
                 
                 <h1 className='font-bold text-3xl my-6 text-black-700 ' style={{ fontFamily: 'Colobri' }}>
@@ -39,9 +39,10 @@ export const Home = () => {
                     <h1 className='font-lato font-extrabold text-black uppercase text-4xl my-4 md:text-6xl'></h1>
 
                     <div className="relative z-10 text-center px-6" style={{ fontFamily: 'Colibri' }} >
-                     <h1 className="text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">
-                       Cuando el cuerpo se mueve<br /> el alma también sana.
-                     </h1>
+                        <h1 className="text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">
+                            Cuando el cuerpo se mueve<br /> el alma también sana.
+                        </h1>
+                        
                         <p className="mt-2 text-lg md:text-2xl opacity-90">
                         Vive el deporte como forma de libertad, emoción y vida.
                         </p>
@@ -134,7 +135,6 @@ export const Home = () => {
                 </p>
             </footer>
 
-          
             
         </>
     )
