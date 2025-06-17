@@ -24,10 +24,27 @@ export const Confirm = () => {
         }
     
     }
-
+/*
     useEffect(()=>{
             veryfyToken()
     },[])
+
+    */
+
+    useEffect(() => {
+        const veryfyToken = async () => {
+            try {
+              const url = `${import.meta.env.VITE_BACKEND_URL}/confirm/${token}`;
+              const respuesta = await axios.get(url);
+              toast.success(respuesta?.data?.msg);
+            } catch (error) {
+              toast.error(error?.response?.data?.msg);
+            }
+          }
+    
+      veryfyToken();
+    }, []);
+    
     return (
         <div 
             className="flex flex-col items-center justify-center h-screen bg-cover bg-center bg-no-repeat "
