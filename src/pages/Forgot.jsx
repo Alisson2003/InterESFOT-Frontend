@@ -24,7 +24,7 @@ export const Forgot = () => {
             // Call the backend to send the password reset email
             await fetchDataBackend(url, data, 'POST');
             // Show a success toast notification
-            toast.success("Correo enviado correctamente. Por favor, revisa tu bandeja de entrada (y la carpeta de spam).");
+            toast.success("Correo enviado correctamente. Por favor, revisa tu bandeja de entrada ");
         } catch (error) {
             // Show an error toast notification
             // It tries to get a specific message from the backend error response,
